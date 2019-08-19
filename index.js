@@ -2,15 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
+<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
 
-function Square(props) {
-  return (
-    <button className="square" onClick={props.onClick}>
-      {props.value}
-    </button>
-  );
+
+class Square extends React.Component { 
+  constructor(props){
+    super(props);
+  }
+  render() {
+    return (
+     
+        <button className="square" onClick={props.onClick}>
+          {props.value}
+        </button>
+     
+    );
+  }
 }
-  
   class Board extends React.Component {
     constructor(props){
       super(props);
